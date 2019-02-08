@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import ReactDom from 'react-dom';
+//ishoon baraye render kardane html estefade msihe 
+//mamulan toye index.js estefasde msihe
 
-ReactDOM.render(<p>START HERE</p>, document.getElementById('root'));
