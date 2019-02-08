@@ -5,5 +5,7 @@ import ReactDom from 'react-dom';
 import App from './components/App/App';
 //in hamun chizi ast ke render mishe 
 //این فایل وضیفه رندر کردن اصلی را به عهده داره
+import './index.css'
 
+ReactDOM.render(<App/>, document.getElementById("root"));
 
