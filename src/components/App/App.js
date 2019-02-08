@@ -5,10 +5,10 @@ import Home from '../Home/Home';
 
 const App = () => {
   return (
-    <>
+    <React.Fragment>
       <Header />
       <Home />
-    </>
+    </React.Fragment>
   );
 }
 
