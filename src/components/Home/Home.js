@@ -1,6 +1,13 @@
 import React from 'react';
 import './Home.css';
 import '../elements/HeroImage/Heroimage';
+import HeroImage from '../elements/HeroImage/Heroimage';
+import FourColGrid from  '../elements/FourColGrid/FourColGrid';
+import Heroimage from  '../elements/HeroImage/Heroimage';
+import LoadMoreBtn from  '../elements/LoadMoreBtn/LoadMoreBtn';
+import MovieThumb from  '../elements/MovieThumb/MovieThumb';
+import SearchBar from  '../elements/SearchBar/SearchBar';
+import Spinner from  '../elements/Spinner/Spinner';
 
 class Home extends React.Component {
 
@@ -10,7 +17,14 @@ class Home extends React.Component {
 
   render(){
     return (
-      <div>Home</div>
+      <div className="rmdb-home">
+        <HeroImage/>
+        <SearchBar/>
+        <FourColGrid/>
+        <Spinner />
+        <LoadMoreBtn/>
+        
+      </div>
     );
   }
 
