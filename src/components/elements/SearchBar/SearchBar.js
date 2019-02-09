@@ -8,7 +8,7 @@ class SearchBar extends React.Component {
     value: '',
   }
 
-  let time out = null;
+  timeout = null;
 
   doSearch = (e) => {
     this.setState({
@@ -16,7 +16,11 @@ class SearchBar extends React.Component {
     });
     //حالا میخوایم چیزی بنویسیم که هر نیم ثانیه بعد از تایپ شدن چیزی
     //چک کنه بازم چیزی مینویسه یا نه اگه نمینویسه سرچ کنه
-    
+      clearTimeout(this.timeout);
+
+    this.timeout = setTimeout(()=>{
+      this.props.callback(this.state.value);
+    },500);
   }
   
   render(){
