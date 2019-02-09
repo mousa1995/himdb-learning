@@ -8,6 +8,7 @@ import LoadMoreBtn from  '../elements/LoadMoreBtn/LoadMoreBtn';
 import MovieThumb from  '../elements/MovieThumb/MovieThumb';
 import SearchBar from  '../elements/SearchBar/SearchBar';
 import Spinner from  '../elements/Spinner/Spinner';
+import { API_URL, API_KEY, IMAGE_BASE_URL,  BACKDROP_SIZE, POSTER_SIZE } from '../../config';
 
 class Home extends React.Component {
 
