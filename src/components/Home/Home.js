@@ -72,8 +72,12 @@ class Home extends React.Component {
   render(){
     return (
       <div className="rmdb-home">
-        <HeroImage/>
-        <SearchBar/>
+        <div>
+         <HeroImage
+          image = {`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.HeroImage.backdrop_path}`}
+         />
+         <SearchBar/>
+        </div>
         <FourColGrid/>
         <Spinner />
         <LoadMoreBtn/>
