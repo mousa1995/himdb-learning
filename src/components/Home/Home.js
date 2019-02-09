@@ -25,8 +25,10 @@ class Home extends React.Component {
     this.setState({
       //کد زیر برای نشان داده شدن لودینگ هست
       loading: true
-      // حالا یو ار الی را که میخواهیم از ان داده را فچ کنیم مشخص میکنیم
     });
+
+    // حالا یو ار الی را که میخواهیم از ان داده را فچ کنیم مشخص میکنیم
+    const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}`
   }
 
   render(){
