@@ -38,9 +38,14 @@ class Home extends React.Component {
     fetch(endPoint)
     .then(result => result.json())
     .then(result => {
+      console.log(result),
       this.setState({
         //در کد زیر ما کپی از فیلم هایی که در استیت هستند میگیریم و نهایتا به فیلم هایی که میایند اضافه میکنیم
-        movie: [...this.state.movie, ...result.results]
+        movie: [...this.state.movie, ...result.results],
+        HeroImage: this.state.HeroImage || result.results[0],
+        loading: false,
+        currentPage: result.page,
+        totalPages: result.total_pages,
       });
     });
 
