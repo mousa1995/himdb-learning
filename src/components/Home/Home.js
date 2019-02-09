@@ -32,6 +32,22 @@ class Home extends React.Component {
     //نمیدونم چرا فچ ایتمس رو ادیتور نیورد
   }
 
+  loadMoreItems = () => {
+    //این با درست کردن یو ار ال سر و کار داره
+    let endPoint = '';
+    this.setState({loading: true});
+
+    //ایف چک میکنه که ما چیزی سرچ نمیکنیم و پس از ان صفحه بعد مشهور ترین فیلم ها رو میاره
+    //الز => میاد چک میکنه که سرچ میکنیم و یو ار ال را برای سرچ درست میکنه
+    if(this.state.searchTerm === ''){
+      endPoint = `${API_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`
+      console.log(this)
+    }else{
+      endPoint = `${API_URL}/movie/popular?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage + 1}`
+    }
+    this.fetchItems(endPoint);
+  }
+
   //حواست باشه که داریم توی کلاس چیز میز مینویسیم همین جوری کانست ننویسی
   fetchItems = (endPoint) => {
     //فچ مال ای اس شش است و چه پرامیس برمیگردونه پس دن میگیره
