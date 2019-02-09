@@ -40,7 +40,14 @@ class Home extends React.Component {
       searchTerm
     });
     //movie: [] --------علت این کد اینه ک زمانی که میخواهیم سرچ کنیم نمیخواهیم بقیه فیلم ها نشون داده بشه
-
+    if(endPoint === ''){
+      const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+    }else {
+      const endPoint = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=${searchTerm}`;
+    }
+    this.fetchItems(endPoint);
+    //ایف که میدونی چه میکنه الز
+    //میاد سرچ میکنه
   }
 
   loadMoreItems = () => {
