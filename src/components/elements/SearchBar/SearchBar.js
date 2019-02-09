@@ -7,6 +7,10 @@ class SearchBar extends React.Component {
   state = {
     value: '',
   }
+
+  doSearch = (e) => {
+    value = e.target.value || "";
+  }
   
   render(){
     return (
