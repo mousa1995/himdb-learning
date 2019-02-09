@@ -10,7 +10,11 @@ const HeroImage = (props) => {
                                   url('${props.image}'), #1c1c1c;`
     }}
     >
-    
+    <div className="rmdb-heroimage-content">
+      <div className="rmdb-heroimage-text">
+        <h1>${}</h1>
+      </div>
+    </div>
       {/*container*/}
     </div>
   );
