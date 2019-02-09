@@ -13,7 +13,12 @@ import { API_URL, API_KEY, IMAGE_BASE_URL,  BACKDROP_SIZE, POSTER_SIZE } from '.
 class Home extends React.Component {
 
   state = {
-
+    movie: [],
+    HeroImage: null,
+    loading: false,
+    currentPage: 0,
+    totalPages: 0,
+    searchTerm: '',
   }
 
   render(){
