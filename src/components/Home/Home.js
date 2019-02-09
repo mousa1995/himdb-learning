@@ -38,7 +38,9 @@ class Home extends React.Component {
     fetch(endPoint)
     .then(result => result.json())
     .then(result => {
-      console.log(result);
+      this.setState({
+        movie: [...movie]
+      });
     });
 
     // .then(result => result.json())
