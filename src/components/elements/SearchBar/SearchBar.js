@@ -12,9 +12,14 @@ class SearchBar extends React.Component {
     return (
       <div className="rmdb-searchbar">
         <div className="rmdb-searchbar-content">
-          <FontAwsome className="rmdb-fa-search" name="search"/>
+          <FontAwsome className="rmdb-fa-search" name="search" size="2x"/>
           {/* نامی که در فونت اوسام رد شده مال خود فونت اوسام است و کلاس رو خودش نوشته*/}
-          
+          <input 
+          type="text"
+          className="rmdb-searchbar-input"
+          placeholder="Search"
+          onChange="doSearch"
+          />
         </div>
       </div>
     )
