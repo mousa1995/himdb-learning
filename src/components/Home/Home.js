@@ -3,7 +3,6 @@ import './Home.css';
 import '../elements/HeroImage/Heroimage';
 import HeroImage from '../elements/HeroImage/Heroimage';
 import FourColGrid from  '../elements/FourColGrid/FourColGrid';
-import Heroimage from  '../elements/HeroImage/Heroimage';
 import LoadMoreBtn from  '../elements/LoadMoreBtn/LoadMoreBtn';
 import MovieThumb from  '../elements/MovieThumb/MovieThumb';
 import SearchBar from  '../elements/SearchBar/SearchBar';
