@@ -32,6 +32,7 @@ class Home extends React.Component {
   }
 
   searchItems = (searchTerm) => {
+    console.log(searchTerm)
     const endPoint = '';
     this.setState({
       movie: [],
@@ -96,7 +97,7 @@ class Home extends React.Component {
           text = {this.state.HeroImage.overview}
           //این جا ارور میگیریم چونکه اول داده باید داخل استیت رفته باشه که اندیفیاند نده
          />
-         <SearchBar/>
+         <SearchBar callback={this.state.searchTerm}/>
         </div> : null}
         <FourColGrid/>
         <Spinner />
