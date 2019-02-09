@@ -32,6 +32,17 @@ class Home extends React.Component {
     //نمیدونم چرا فچ ایتمس رو ادیتور نیورد
   }
 
+  searchItems = (searchTerm) => {
+    const endPoint = '';
+    this.setState({
+      movie: [],
+      loading: true,
+      searchTerm
+    });
+    //movie: [] --------علت این کد اینه ک زمانی که میخواهیم سرچ کنیم نمیخواهیم بقیه فیلم ها نشون داده بشه
+
+  }
+
   loadMoreItems = () => {
     //این با درست کردن یو ار ال سر و کار داره
     let endPoint = '';
