@@ -32,8 +32,10 @@ class Home extends React.Component {
     //نمیدونم چرا فچ ایتمس رو ادیتور نیورد
   }
 
-  const fetchItems = (endPoint) => {
-
+  //حواست باشه که داریم توی کلاس چیز میز مینویسیم همین جوری کانست ننویسی
+  fetchItems = (endPoint) => {
+    //فچ مال ای اس شش است و چه پرامیس برمیگردونه پس دن میگیره
+    fetch(endPoint)
   }
   
   render(){
