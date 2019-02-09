@@ -72,7 +72,7 @@ class Home extends React.Component {
   render(){
     return (
       <div className="rmdb-home">
-        <div>
+        {this.state.HeroImage ? <div>
          <HeroImage
           image = {`${IMAGE_BASE_URL}${BACKDROP_SIZE}${this.state.HeroImage.backdrop_path}`}
           title = {this.state.HeroImage.original_title}
@@ -80,7 +80,7 @@ class Home extends React.Component {
           //این جا ارور میگیریم چونکه اول داده باید داخل استیت رفته باشه که اندیفیاند نده
          />
          <SearchBar/>
-        </div>
+        </div> : null}
         <FourColGrid/>
         <Spinner />
         <LoadMoreBtn/>
