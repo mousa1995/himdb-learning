@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
           type="text"
           className="rmdb-searchbar-input"
           placeholder="Search"
-          onChange="doSearch"
+          onChange={this.doSearch()}
           />
         </div>
       </div>
