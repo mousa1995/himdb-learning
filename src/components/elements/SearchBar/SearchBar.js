@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
           className="rmdb-searchbar-input"
           placeholder="Search"
           onChange={this.doSearch}
-          value={this.setState({value})}
+          value={this.state.value}
           />
         </div>
       </div>
