@@ -36,6 +36,13 @@ class Home extends React.Component {
   fetchItems = (endPoint) => {
     //فچ مال ای اس شش است و چه پرامیس برمیگردونه پس دن میگیره
     fetch(endPoint)
+    .then(result => result.json())
+    .then(result => {
+      console.log(result);
+    });
+
+    // .then(result => result.json())
+    //کد بالا => زمانی که نتیجه پرامیس امد داده خام است پس ان را به جیسون تبدیل میکنیم
   }
   
   render(){
