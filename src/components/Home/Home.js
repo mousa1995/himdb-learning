@@ -26,14 +26,16 @@ class Home extends React.Component {
       //کد زیر برای نشان داده شدن لودینگ هست
       loading: true
     });
-
     // حالا یو ار الی را که میخواهیم از ان داده را فچ کنیم مشخص میکنیم
     const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     this.fetchItems(endPoint);
     //نمیدونم چرا فچ ایتمس رو ادیتور نیورد
-    
   }
 
+  const fetchItems = (endPoint) => {
+
+  }
+  
   render(){
     return (
       <div className="rmdb-home">
