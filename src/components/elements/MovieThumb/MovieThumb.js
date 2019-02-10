@@ -3,7 +3,9 @@ import './MovieThumb.css';
 
 const MovieThumb = (props) => {
   return (
-    <div>MovieThumb</div>
+    <div>
+      <img src={props.image} alt="MovieTumb"/>
+    </div>
   );
 }
 
