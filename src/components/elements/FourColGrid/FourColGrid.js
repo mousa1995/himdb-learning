@@ -9,8 +9,10 @@ const FourColGrid = (props) => {
     //1. پراپ ها رو بگیرم
     //2. روش لوپ کنم و ی چیزی رندر کنم
     // نتیجه رو بفرستم
-    const gridElements = props.children.map( element => {
+    const gridElements = props.children.map( (element, i) => {
       //خوب المنت رو چجوری رندر میکنیم؟
+      //علت اضافه شدن ای اینه که داریم روی یه چیزی لوپ میکنیم و ریاکت کلید میخواد برای هر المنت
+      <div></div>
     })
 
   }
