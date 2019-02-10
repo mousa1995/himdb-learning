@@ -12,7 +12,11 @@ const FourColGrid = (props) => {
     const gridElements = props.children.map( (element, i) => {
       //خوب المنت رو چجوری رندر میکنیم؟
       //علت اضافه شدن ای اینه که داریم روی یه چیزی لوپ میکنیم و ریاکت کلید میخواد برای هر المنت
-      <div></div>
+      return (
+        <div key={i} className="rmdb-grid-element">
+          
+        </div>
+      );
     })
 
   }
