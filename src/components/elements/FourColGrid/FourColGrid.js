@@ -14,10 +14,11 @@ const FourColGrid = (props) => {
       //علت اضافه شدن ای اینه که داریم روی یه چیزی لوپ میکنیم و ریاکت کلید میخواد برای هر المنت
       return (
         <div key={i} className="rmdb-grid-element">
-          
+          {element}
         </div>
       );
-    })
+    });
+    return gridElements;  
 
   }
 
