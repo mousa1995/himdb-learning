@@ -117,9 +117,12 @@ class Home extends React.Component {
             )
           })}
           </FourColGrid>
+          {this.state.loading ? <Spinner />: null}
+          {/* کد بالا چیز جدیدی نداره */}
+          {(this.state.currentPage <= this.state.totalPages && !this.state.loading) ?
+          <LoadMoreBtn text = "Load More" onClick = {this.loadMoreItems} /> : null
+          }
         </div>
-        <Spinner />
-        <LoadMoreBtn/>
         
       </div>
     );
