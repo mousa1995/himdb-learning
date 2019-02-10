@@ -99,7 +99,14 @@ class Home extends React.Component {
          />
          <SearchBar callback={this.state.searchTerm}/>
         </div> : null}
-        <FourColGrid/>
+        <div className="rmdb-home-grid">
+          <FourColGrid 
+            header = {this.state.searchTerm ? 'Search result' : 'Popular Movies'}
+            loading = {this.state.loading}
+          > 
+          
+          </FourColGrid>
+        </div>
         <Spinner />
         <LoadMoreBtn/>
         
