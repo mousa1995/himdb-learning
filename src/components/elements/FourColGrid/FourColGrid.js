@@ -5,7 +5,14 @@ import './FourColGrid.css';
 const FourColGrid = (props) => {
 
   const renderElements =  () => {
-    
+    //توی این فانکشن میخواهیم از پراپ استفاده کنیم و لوپ کنیم و به تعداد ان المنت رندر کنیم
+    //1. پراپ ها رو بگیرم
+    //2. روش لوپ کنم و ی چیزی رندر کنم
+    // نتیجه رو بفرستم
+    const gridElements = props.children.map( element => {
+      //خوب المنت رو چجوری رندر میکنیم؟
+    })
+
   }
 
   return (
