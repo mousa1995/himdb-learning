@@ -104,7 +104,18 @@ class Home extends React.Component {
             header = {this.state.searchTerm ? 'Search result' : 'Popular Movies'}
             loading = {this.state.loading}
           > 
-          
+          {/* این جا فیلم ها رو از استیت میگیریم و روش میچرخیم */}
+          {this.state.movie.map((element, i) => {
+            return(
+              <MovieThumb
+                key={i}
+                clickable = {true}
+                image = {element.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${element.poster_path}`: './images/no_image.jpeg'}
+                movieId = {element.id}
+                movieName = {element.original_title}
+              />
+            )
+          })}
           </FourColGrid>
         </div>
         <Spinner />

@@ -25,7 +25,7 @@ const FourColGrid = (props) => {
   return (
     <div className="rmdb-grid">
       {/* کد زیر میگه لودینگ نباشه و هدری باشه نشونش بده */}
-      { !loading && props.header ? <h1>{props.header}</h1> : null }
+      { props.header && !props.loading ? <h1>{props.header}</h1> : null }
       <div className="rmdb-grid-content">
         {renderElements()}
       </div>
