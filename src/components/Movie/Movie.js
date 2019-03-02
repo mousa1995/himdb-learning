@@ -46,6 +46,7 @@ class Movie extends Component {
       } else {
         //here we got the movie 
         //so we must fill out state with the data
+        this.setState({ movie: result });
       }
 
     })
