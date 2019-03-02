@@ -39,6 +39,14 @@ class Movie extends Component {
     fetch(endPoint)
     .then(result => result.json())
     .then(result => {
+      //این جا مجبوریم چک کنیم فیلمی باشه که 404 نشونمون نده
+      if(result.status_code) {
+        this.setState({ loading: false });
+        //it means we didnt got any movie!
+      } else {
+        //here we got the movie 
+        //so we must fill out state with the data
+      }
 
     })
   }
