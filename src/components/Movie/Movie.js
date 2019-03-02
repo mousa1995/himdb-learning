@@ -70,7 +70,8 @@ class Movie extends Component {
         //این جا میخواد بازیگرا رو هم بگیره خببببب چجوری؟
       }
 
-    })
+    }).catch(error => console.error('ERROR:', error))
+    //توی گرفتن اررور ما امدیم جایی که فچ داره رو کچ کردیم
   }
   
   render(){
