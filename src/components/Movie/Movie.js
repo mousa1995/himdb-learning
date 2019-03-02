@@ -18,6 +18,11 @@ class Movie extends Component {
     loading: false
   }
 
+  // 2. نوشتن لایف سایکل مناسب برای چرخه
+  componentDidMount () {
+    this.setState({ loading: true });
+    //loading had been set to true because we need to fetch the data
+  }
   
   render(){
     return (
