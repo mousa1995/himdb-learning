@@ -46,7 +46,26 @@ class Movie extends Component {
       } else {
         //here we got the movie 
         //so we must fill out state with the data
-        this.setState({ movie: result });
+        this.setState({ movie: result }, () => {
+          //it seems the magic is going to happen again!
+          //we are going to fetch the actors here!
+          //so my guess was true it is not in the movie and we shold make another end point!
+          const endPoint = `${API_URL}movie/${this.props.match.params.movieId}/credits?api_key=${API_KEY}`;
+          //now we made a new endpoint now we need to fetch new data from api
+          fetch(endPoint)
+          .then(result => result.json())
+          .then( result => {
+            //now we have the data is a json format
+            //so we get the directors => it's how depends on where are they!
+            const directors = result.crew.filter( member => member.jon === "Director" );
+
+            this.setState({ 
+              directors: directors,
+              actors: result.cast,
+              loading: false
+             })
+          })
+        });
         //الان میخواد بعد ست کردن استیت بیاد و یه کار دیگه هم بکنه مثلا
         //این جا میخواد بازیگرا رو هم بگیره خببببب چجوری؟
       }
