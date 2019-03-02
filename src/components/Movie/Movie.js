@@ -25,6 +25,9 @@ class Movie extends Component {
     const endPoint = `${API_URL}movie/${this.props.match.params.movieId}?api_key=${API_KEY}&lang=en-US`;
     //دلدل ساخته شدن نقطه پایان رو نمیدونم
     //حالا میخواهیم فچ کنیم چجوری این کار رو میکردیم؟
+
+    //دلیل ساختن نقطه پایان اینه که به فج بگیم از کجا فچ کنه
+    //فچ رو هم توی لایف سایکل صدا میزنیم و براش یه فانکشن مینویسیم
   }
   
   render(){
