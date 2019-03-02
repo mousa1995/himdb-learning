@@ -9,8 +9,13 @@ import Spinner from '../elements/Spinner/Spinner';
 import './Movie.css';
 
 class Movie extends Component {
-  state = {
 
+  // 1. نوشتن استیت ها
+  state = {
+    movie: null,
+    actors: null,
+    directors: [],
+    loading: false
   }
 
   
