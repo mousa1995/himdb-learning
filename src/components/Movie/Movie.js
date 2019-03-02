@@ -31,8 +31,16 @@ class Movie extends Component {
     this.fetchItems(endPoint);
   }
 
-  const fetchItems  = () => {
+  fetchItems  = (endPoint) => {
+    //we fetch with endPoint
+    //we get a result and convert it to json
+    //then the magic happens!
+    //چرا اکولاد گذاشت؟
+    fetch(endPoint)
+    .then(result => result.json())
+    .then(result => {
 
+    })
   }
   
   render(){
