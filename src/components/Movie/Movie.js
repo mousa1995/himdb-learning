@@ -24,6 +24,7 @@ class Movie extends Component {
     //loading had been set to true because we need to fetch the data
     const endPoint = `${API_URL}movie/${this.props.match.params.movieId}?api_key=${API_KEY}&lang=en-US`;
     //دلدل ساخته شدن نقطه پایان رو نمیدونم
+    //حالا میخواهیم فچ کنیم چجوری این کار رو میکردیم؟
   }
   
   render(){
