@@ -28,6 +28,11 @@ class Movie extends Component {
 
     //دلیل ساختن نقطه پایان اینه که به فج بگیم از کجا فچ کنه
     //فچ رو هم توی لایف سایکل صدا میزنیم و براش یه فانکشن مینویسیم
+    this.fetchItems(endPoint);
+  }
+
+  const fetchItems  = () => {
+
   }
   
   render(){
