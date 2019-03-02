@@ -47,6 +47,8 @@ class Movie extends Component {
         //here we got the movie 
         //so we must fill out state with the data
         this.setState({ movie: result });
+        //الان میخواد بعد ست کردن استیت بیاد و یه کار دیگه هم بکنه مثلا
+        //این جا میخواد بازیگرا رو هم بگیره خببببب چجوری؟
       }
 
     })
