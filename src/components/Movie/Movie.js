@@ -20,6 +20,7 @@ class Movie extends Component {
 
   // 2. نوشتن لایف سایکل مناسب برای چرخه
   componentDidMount () {
+    console.log("from navigation" , this.props)
     this.setState({ loading: true });
     //loading had been set to true because we need to fetch the data
     const endPoint = `${API_URL}movie/${this.props.match.params.movieId}?api_key=${API_KEY}&lang=en-US`;
@@ -39,7 +40,6 @@ class Movie extends Component {
     fetch(endPoint)
     .then(result => result.json())
     .then(result => {
-      console.log(result);
       //این جا مجبوریم چک کنیم فیلمی باشه که 404 نشونمون نده
       if(result.status_code) {
         this.setState({ loading: false });
@@ -56,6 +56,7 @@ class Movie extends Component {
           fetch(endPoint)
           .then(result => result.json())
           .then( result => {
+            console.log(result)
             //now we have the data is a json format
             //so we get the directors => it's how depends on where are they!
             const directors = result.crew.filter( member => member.jon === "Director" );
@@ -78,11 +79,36 @@ class Movie extends Component {
   render(){
     return (
       <div className="rmdb-movie">
-        <Navigation movie={this.state.movie} />
-        <MovieInfo  movie={this.state.movie}/>
-        <MovieInfoBar />
-        {/* <FourColGrid /> */}
-        <Spinner />
+        {/* اول چک میکنیم که توی استیت فیلم باشه */}
+        {this.state.movie ? 
+        <div>
+         <Navigation movie={this.props.location.movieName} />
+         {/* // این چیزی که بالاس همونیه که توی اپ با پراپ فرستادیم درواقع شناسه متحرک اینه */}
+         <MovieInfo movie={this.state.movie} directors={this.state.directors}  />
+        <MovieInfoBar time={this.state.movie.runtime} budget={this.state.movie.budget} revenue={this.state.movie.revenue} />
+        </div>
+        : null }
+        {/* مشخصات فیلم رو فرستادیم */}
+
+        {/* حالا چک میکنیم بازیگر داشته باشه بعد مثل بالا یی رد میکنیم */}
+        {
+          this.state.actors ?
+          <div className="rmdb-movie-grid">
+            <FourColGrid header={'Actors'}>
+            {this.state.actors.map((element, i)=> {
+              return <Actor key={i} actor={element} />
+            })}
+            </FourColGrid>
+          </div>
+          : null
+        }
+
+        {/* چک میکنیم ادم مریضی عدد الکی نفرسته با چک کردن بازیگر */}
+        {!this.state.actors && !this.state.loading ? <h1> No Movie Found </h1> : null }
+
+        {/* لودینگ باشه نشون بده داره لودینگ میشه */}
+        {this.state.loading ? <Spinner/> : null}
+
       </div>
     )
   }

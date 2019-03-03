@@ -5,11 +5,11 @@ const Navigation = (props) => {
   return (
     <div className="rmdb-navigation">
       <div className="rmdb-navigation-content">
-        <link to="/">
+        <Link to="/">
         <p>home</p>
-        </link>
+        </Link>
         <p>/</p>
-
+        {console.log(props.movie)}
         <p>{props.movie}</p>
         {/* توی بالا یی عنوان فیلم رو میگیریم */}
       </div>
