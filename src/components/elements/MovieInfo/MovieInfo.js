@@ -28,7 +28,14 @@ const MovieInfo = (props) => {
         <h3>IMDB RATING</h3>
         <div className="rmdb-rating"> 
           <meter min="0" max="100" optimum="100" low="40" high="70" value={props.movie.vote_average * 10}></meter>
+          <p className="rmdb-score">{props.movie.vote_average }</p>
         </div>
+        {/* کد زیر چک میکنه چند نفرند و متن متناسب تولید میکنه */}
+        {props.directors.length > 1 ? <h3>DIRECTORS</h3> : <h3>DIRECTOR</h3>}
+        {/* کد زیر میاد میچرخه و به تعدادشون عنصر مناسب برمیگردونه */}
+        {props.directors.map((element, i) => {
+          return <p key={i} className="rmdb-director">{element.name}</p>
+        })}
       </div>
     </div>
     </div>
