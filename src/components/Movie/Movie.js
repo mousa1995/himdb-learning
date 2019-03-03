@@ -79,7 +79,7 @@ class Movie extends Component {
     return (
       <div className="rmdb-movie">
         <Navigation movie={this.state.movie} />
-        <MovieInfo />
+        <MovieInfo  movie={this.state.movie}/>
         <MovieInfoBar />
         {/* <FourColGrid /> */}
         <Spinner />
