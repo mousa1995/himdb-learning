@@ -78,7 +78,7 @@ class Movie extends Component {
   render(){
     return (
       <div className="rmdb-movie">
-        <Navigation />
+        <Navigation movie={this.state.movie} />
         <MovieInfo />
         <MovieInfoBar />
         {/* <FourColGrid /> */}
