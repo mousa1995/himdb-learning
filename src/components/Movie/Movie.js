@@ -39,6 +39,7 @@ class Movie extends Component {
     fetch(endPoint)
     .then(result => result.json())
     .then(result => {
+      console.log(result);
       //این جا مجبوریم چک کنیم فیلمی باشه که 404 نشونمون نده
       if(result.status_code) {
         this.setState({ loading: false });
@@ -80,7 +81,7 @@ class Movie extends Component {
         <Navigation />
         <MovieInfo />
         <MovieInfoBar />
-        <FourColGrid />
+        {/* <FourColGrid /> */}
         <Spinner />
       </div>
     )
