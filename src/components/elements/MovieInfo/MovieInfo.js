@@ -37,6 +37,7 @@ const MovieInfo = (props) => {
           return <p key={i} className="rmdb-director">{element.name}</p>
         })}
       </div>
+      <FontAwesome className="fa-film" size="5x" name="film"/>
     </div>
     </div>
   )
