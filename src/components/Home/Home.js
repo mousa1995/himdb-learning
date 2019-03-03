@@ -80,8 +80,17 @@ class Home extends React.Component {
         loading: false,
         currentPage: result.page,
         totalPages: result.total_pages,
+      }, () => {
+        localStorage.setItem('Home', JSON.stringify(this.state));
       });
     });
+      //توی کد بالا بلافاصله بعد از این که استیت دادیم بعد فچ کردن داده میایم و یک کالبک فانکشن مینویسیم
+    //میاد بلافاصله یک ایتم میسازه
+    //ست ایتم 2 تا چیز میگیره یکی این که چه اسمی براش بگذاریم
+    //دوم این که بتونیم تبدیلش بکنیم به استرینگ
+
+
+
 
     // .then(result => result.json())
     //کد بالا => زمانی که نتیجه پرامیس امد داده خام است پس ان را به جیسون تبدیل میکنیم
