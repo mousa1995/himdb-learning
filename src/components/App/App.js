@@ -8,7 +8,7 @@ import NotFound from '../elements/NotFound/NotFound';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="subDomain!">
       <React.Fragment>
       <Header/>
       <Switch>
@@ -21,5 +21,7 @@ const App = () => {
     </BrowserRouter>
   );
 }
+
+//نکته دوم اینه که لینک هاشو گفت من بصورت مطلق میگذارم کار میکنه ببینید برای شما چجوریه
 
 export default App;
