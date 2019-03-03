@@ -21,15 +21,21 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({
+    if( localStorage.getItem('Home') ) {
+      const state = JSON.parse(localStorage.getItem('Home'));
+
+      this.setState({ ...state });
+    } else {this.setState({
       //کد زیر برای نشان داده شدن لودینگ هست
       loading: true
     });
     // حالا یو ار الی را که میخواهیم از ان داده را فچ کنیم مشخص میکنیم
     const endPoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
     this.fetchItems(endPoint);
-    //نمیدونم چرا فچ ایتمس رو ادیتور نیورد
+    //نمیدونم چرا فچ ایتمس رو ادیتور نیورد}
   }
+  //خب چجوری داده رو از لوکال استورج در میاریم
+  //مثلا مثل الان قبل از لایف سایکل میام و چک میکنم اگه چیزی که من دنبالشم بود نمیگیرم
 
   searchItems = (searchTerm) => {
     console.log(searchTerm)
