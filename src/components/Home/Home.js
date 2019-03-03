@@ -103,6 +103,12 @@ class Home extends React.Component {
   }
   
   render(){
+
+    const { movie, HeroImage, loading, currentPage, totalPages } = this.state;
+    const { prop1, prop2 } = this.state;
+    //بعدشم کل دیس دات استیت و دیس دات پروپ را حذف میکنیم
+    //اینم از روش دیستراکت کردن توی کلاسیکال کامپوننت ها
+
     return (
       <div className="rmdb-home">
         {this.state.HeroImage ? <div>
