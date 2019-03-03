@@ -26,8 +26,8 @@ const MovieInfo = (props) => {
         <h3>PLOT</h3>
         <p>{props.movie.overview}</p>
         <h3>IMDB RATING</h3>
-        <div className="rmdb-rating">
-          
+        <div className="rmdb-rating"> 
+          <meter min="0" max="100" optimum="100" low="40" high="70" value={props.movie.vote_average * 10}></meter>
         </div>
       </div>
     </div>
